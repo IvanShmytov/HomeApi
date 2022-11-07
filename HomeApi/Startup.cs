@@ -39,7 +39,7 @@ namespace HomeApi
             services.AddDbContext<HomeApiContext>(options => options.UseSqlServer(connection), ServiceLifetime.Singleton);
 
             // Подключаем валидацию
-            services.AddFluentValidation( fv =>  fv.RegisterValidatorsFromAssemblyContaining<AddDeviceRequestValidator>() );
+            services.AddFluentValidation( fv =>  fv.RegisterValidatorsFromAssemblyContaining<EditRoomRequestValidator>() );
             
             // Добавляем новый сервис
             services.Configure<HomeOptions>(Configuration);
